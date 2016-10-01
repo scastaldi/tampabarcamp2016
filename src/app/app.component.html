@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+<input #txt (keyup.enter)="add(txt)">
+<ul>
+  <li *ngFor="let l of myList" (click)="removeItem(l)">
+    {{l.name}}
+  </li>
+</ul>
